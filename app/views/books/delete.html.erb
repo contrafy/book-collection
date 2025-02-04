@@ -1,0 +1,14 @@
+<h1>Delete Book</h1>
+
+<p>Delete the following book?</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<%= button_to "Yes", book_path(@book), 
+    method: :delete, 
+    data: { confirm: "Are you sure?" } %>
+
+<%= link_to "No", root_path %>
